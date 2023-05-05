@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h2> Gissa det hemliga numret mellan 1-20 </h2>
+<body>
+<form method="post" action="/game">
+    <input name="guess" type="text" size="8"/>
+    </br>
+    <input name="button" type="submit" value="Skicka">
+</form>
+<p th:text="${gameover}"></p>
+<table style="...">
+    <tr th:each="guessAnswer:${answers}">
+        <td><span th:text="${guessAnswer}"></span></td>
+    </tr>
+    </br>
+    <a href="/result" target="_blank">Topplista</a>
+    </br>
+</table>
+
+</body>
+</html>

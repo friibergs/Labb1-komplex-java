@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h2>Topplista</h2>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>Spelare</th>
+    <th>Snittpoäng</th>
+  </tr>
+  </thead>
+  <form method="get" action="/result"></form>
+<tbody>
+<tr th:each="playeraverage:${toplist}">
+  <td th:text="${playeraverage.name}"></td>
+  <td th:text="${playeraverage.averageScore}"></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
